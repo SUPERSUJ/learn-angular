@@ -1,0 +1,9 @@
+<p>
+  parent-to-son1
+</p>
+<p>
+  number:<input type="number" [(ngModel)]="num" (keyup)="0">
+  name:<input type="text" #name (keyup)="0">
+</p>
+<app-son1 [oneNum]="num" [name]="name.value"></app-son1>
+

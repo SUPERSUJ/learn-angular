@@ -1,0 +1,4 @@
+<button (click)="toggle()">toggle trigger animate</button>
+<button (click)="changeState()">toggle active</button>
+<div *ngIf="isShow" @fadeIn (@fadeIn.start)="animationStart($event)" (@fadeIn.done)="animationDone($event)">利用ngIf</div>
+<div [@fadeIn]="state" (@fadeIn.start)="animationStart($event)" (@fadeIn.done)="animationDone($event)">利用[@fadeIn]</div>

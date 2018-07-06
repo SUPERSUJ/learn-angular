@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'get-parent',
     loadChildren: 'src/app/get-parent/get-parent.module#GetParentModule'
   },
+  {
+    path: 'recursive',
+    loadChildren: 'src/app/recursive/recursive.module#RecursiveModule'
+  },
 ];
 
 @NgModule({

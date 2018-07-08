@@ -1,5 +1,9 @@
 <h1>Angular Recursive List</h1>
 <ul>
+  <li routerLink="/recursive/template-and-container">ng-template和ng-container例子</li>
+</ul>
+<ul>
+  <!-- let-list="$implicit" 与 let-list 是等价的 -->
   <ng-template #recursiveList let-list>
     <li *ngFor="let item of list">
       {{item.title}}
@@ -10,3 +14,5 @@
   </ng-template>
   <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
 </ul>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<p>
+  renderer2 例子
+</p>
+<p>addChild</p>
+<ul (click)="addChild()" #a>
+  <li>click here to add li.</li>
+</ul>
+<p>利用directive方式实现addChild</p>
+<ul appAdd>
+  <li>click here to add li.</li>
+</ul>
+<p>利用directive方式实现insertBefore</p>
+<div>
+  <div appInsertBefore>
+    Click
+  </div>
+</div>
+<p class="removeChild">利用directive方式实现removeChild</p>
+<div appRemoveChild>
+  mouseover
+</div>
+<p>selectRootElement方法</p>
+<!-- 当前组件的顶级元素 -->
+<div appSelectRootElement>click</div>
+<div class="myclass"></div>
+<p>removeAttribute和addAttribute方法</p>
+<input type="text" appAttribute>
+<p>setProperty方法</p>
+<div appSetProperty>click 设置id</div>
+<p>addClass和removeClass方法</p>
+<div appClassName>messi</div>
+<p>setStyle和removeStyle方法</p>
+<div appStyle>Toaro</div>
+<p>parentNode方法</p>
+<div>
+  <div>hollo world</div>
+  <div appParentNode>child</div>
+</div>
+<p>listen方法</p>
+<div #xyz> --- Click Here --- </div> 

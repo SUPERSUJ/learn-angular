@@ -1,0 +1,15 @@
+<p>
+    ng-template和ng-container例子
+</p>
+<ng-container *ngTemplateOutlet="greet"></ng-container>
+<ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+<ng-container *ngTemplateOutlet="svk; context: myContext"></ng-container>
+<ng-template #greet>
+  <p>Hello</p>
+</ng-template>
+<ng-template #eng let-name>
+  <p>Hello {{name}}</p>
+</ng-template>
+<ng-template #svk let-person="localSk">
+  <p>Ahoj {{person}}</p>
+</ng-template>

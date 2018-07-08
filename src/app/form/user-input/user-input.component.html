@@ -1,0 +1,9 @@
+<p>通过 $event 对象取得用户输入</p>
+<input type="text" (keyup)="onKey($event)">
+<p>{{values}}</p>
+<p>从一个模板引用变量中获得用户输入</p>
+<input type="text" #ipt (keyup)="0">
+<p>{{ipt.value}}</p>
+<p>按键事件过滤（通过 key.enter）</p>
+<input type="text" #box (keyup.enter)="onEnter(box.value)" (blur)="update(box.value)">
+<p>{{value}}</p>

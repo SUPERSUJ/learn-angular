@@ -52,6 +52,14 @@ const routes: Routes = [
     path: 'dyna-create-com',
     loadChildren: 'src/app/dyna-create-com/dyna-create-com.module#DynaCreateComModule'
   },
+  {
+    path: 'content-child',
+    loadChildren: 'src/app/content-child/content-child.module#ContentChildModule'
+  },
+  {
+    path: 'content-children',
+    loadChildren: 'src/app/content-children/content-children.module#ContentChildrenModule'
+  },
 ];
 
 @NgModule({

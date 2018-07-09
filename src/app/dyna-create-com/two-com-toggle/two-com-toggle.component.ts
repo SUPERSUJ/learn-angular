@@ -7,6 +7,7 @@ import {
   ComponentRef,
   AfterContentInit,
   OnChanges,
+  OnDestroy,
 } from '@angular/core';
 
 import { ToggleChild1Component } from '../toggle-child1/toggle-child1.component';
@@ -18,7 +19,7 @@ import { ToggleChild2Component } from '../toggle-child2/toggle-child2.component'
   styleUrls: ['./two-com-toggle.component.css'],
   entryComponents: [ToggleChild1Component, ToggleChild2Component],
 })
-export class TwoComToggleComponent implements AfterContentInit, OnChanges {
+export class TwoComToggleComponent implements AfterContentInit, OnChanges, OnDestroy {
   @Input()
   child: string;
   @Input()
@@ -54,5 +55,9 @@ export class TwoComToggleComponent implements AfterContentInit, OnChanges {
   ngOnChanges(changes) {
     console.log('changes: ', changes);
     this.renderComponent();
+  }
+
+  ngOnDestroy() {
+    this.componentRef.destroy();
   }
 }

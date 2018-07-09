@@ -68,6 +68,10 @@ const routes: Routes = [
     path: 'life-cycle',
     loadChildren: 'src/app/life-cycle/life-cycle.module#LifeCycleModule'
   },
+  {
+    path: 'diff-directive',
+    loadChildren: 'src/app/diff-directive/diff-directive.module#DiffDirectiveModule'
+  },
 ];
 
 @NgModule({

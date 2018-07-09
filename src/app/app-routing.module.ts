@@ -64,6 +64,10 @@ const routes: Routes = [
     path: 'view-child',
     loadChildren: 'src/app/view-child/view-child.module#ViewChildModule'
   },
+  {
+    path: 'life-cycle',
+    loadChildren: 'src/app/life-cycle/life-cycle.module#LifeCycleModule'
+  },
 ];
 
 @NgModule({

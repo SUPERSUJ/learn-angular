@@ -60,6 +60,10 @@ const routes: Routes = [
     path: 'content-children',
     loadChildren: 'src/app/content-children/content-children.module#ContentChildrenModule'
   },
+  {
+    path: 'view-child',
+    loadChildren: 'src/app/view-child/view-child.module#ViewChildModule'
+  },
 ];
 
 @NgModule({

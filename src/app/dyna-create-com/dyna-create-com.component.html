@@ -1,4 +1,7 @@
 <p>异步创建组件</p>
+<ul>
+  <li routerLink="/dyna-create-com/toggle">两个组件相互切换</li>
+</ul>
 <template #alertContainer></template>
 <button (click)="createComponent('success')">
   Create success alert
@@ -6,3 +9,4 @@
 <button (click)="createComponent('danger')">
   Create danger alert
 </button>
+<router-outlet></router-outlet>

@@ -2,11 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DynaCreateComComponent } from './dyna-create-com.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DynaCreateComComponent
+    component: DynaCreateComComponent,
+    children: [
+      {
+        path: 'toggle',
+        component: ToggleComponent,
+      },
+    ],
   }
 ];
 

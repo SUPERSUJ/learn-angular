@@ -1,0 +1,10 @@
+<p>
+  组件相互切换
+</p>
+<div>
+  <button (click)="change(1)">child1 && hello</button>
+  <button (click)="change(2)">child2 && hi</button>
+  <p>child:{{child}}</p>
+  <p>value:{{value}}</p>
+</div>
+<app-two-com-toggle [child]="child" [value]="value"></app-two-com-toggle>

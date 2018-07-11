@@ -72,6 +72,10 @@ const routes: Routes = [
     path: 'diff-directive',
     loadChildren: 'src/app/diff-directive/diff-directive.module#DiffDirectiveModule'
   },
+  {
+    path: 'change-detection',
+    loadChildren: 'src/app/change-detection/change-detection.module#ChangeDetectionModule'
+  },
 ];
 
 @NgModule({

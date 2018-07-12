@@ -29,17 +29,22 @@ const randomFactory = () => {
 export class UseFactoryComponent implements OnInit {
   name: string;
   hero: any;
+  heroservice: any;
 
   constructor(
     @Inject(UseFactoryService) private userFactoryService,
     @Inject('Random') private random,
     private injector: Injector) {
     this.name = this.userFactoryService.getName();
-    let heroservice = this.injector.get(HeroService);
-    this.hero = heroservice.getHeros();
+    this.heroservice = this.injector.get(HeroService);
+    // 当改变HeroService中的name的时候，hero也是实时刷新
+    this.hero = this.heroservice.getHeros();
   }
 
   ngOnInit() {
   }
 
+  changeName(name: string) {
+    this.heroservice.setName(name);
+  }
 }

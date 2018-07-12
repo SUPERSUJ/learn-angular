@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { InjectRoutingModule } from './inject-routing.module';
 import { InjectComponent } from './inject.component';
@@ -7,13 +8,15 @@ import { InjectClassComponent } from './inject-class/inject-class.component';
 import { NameService } from './inject-class/inject-class.component';
 import { UseValueComponent } from './use-value/use-value.component';
 import { UseExistingComponent } from './use-existing/use-existing.component';
-import { HeroService } from './hero.service';
+// import { HeroService } from './hero.service';
 import { UseFactoryService } from './use-factory.service';
 import { UseFactoryComponent } from './use-factory/use-factory.component';
+import { UseFactoryChildComponent } from './use-factory-child/use-factory-child.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     InjectRoutingModule
   ],
   declarations: [
@@ -21,11 +24,13 @@ import { UseFactoryComponent } from './use-factory/use-factory.component';
     InjectClassComponent,
     UseValueComponent,
     UseExistingComponent,
-    UseFactoryComponent
+    UseFactoryComponent,
+    UseFactoryChildComponent
   ],
   providers: [
     NameService,
-    HeroService,
+    // @Component的元数据有了providers： [HeroService],就可以不用再这里写
+    // HeroService,
     UseFactoryService
   ],
 })

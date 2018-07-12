@@ -10,3 +10,9 @@
 <p>
   hero: {{hero | json}}
 </p>
+<p>
+  设置name：
+  <input type="text" [(ngModel)]="name">
+  <button (click)="changeName(name)">改变name</button>
+</p>
+<app-use-factory-child></app-use-factory-child>

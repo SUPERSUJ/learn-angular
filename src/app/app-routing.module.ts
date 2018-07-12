@@ -76,6 +76,10 @@ const routes: Routes = [
     path: 'change-detection',
     loadChildren: 'src/app/change-detection/change-detection.module#ChangeDetectionModule'
   },
+  {
+    path: 'inject',
+    loadChildren: 'src/app/inject/inject.module#InjectModule'
+  },
 ];
 
 @NgModule({

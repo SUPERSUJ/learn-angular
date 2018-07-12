@@ -1,5 +1,14 @@
 <p>
   所有知识点集合的例子
 </p>
+<pre>
+  selector 用于设置匹配元素，常见的类型如下：
+  element-name: 元素名匹配，如 exe-app
+  .class: 类名匹配，如 .intro
+  [attribute]: 属性名匹配，如 [target]
+  [attribute=value]: 属性名和属性值匹配，如 [target=_blank]
+  :not(sub_selector): 非(sub_selector) 匹配，如 :not(p)
+  selector1, selector2: selector1、selector2 匹配，如 div,p
+</pre>
 <button appBtn>click</button>
 <button (click)="testEventArg()">每个事件都有event参数，即使没有这个形参</button>

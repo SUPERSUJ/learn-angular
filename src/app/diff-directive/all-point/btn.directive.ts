@@ -1,4 +1,4 @@
-import { Directive, HostListener, HostBinding, ElementRef, Renderer } from '@angular/core';
+import { Directive, HostListener, HostBinding, ElementRef, Renderer, OnInit, OnDestroy } from '@angular/core';
 
 @Directive({
   selector: 'button[appBtn]',
@@ -6,7 +6,7 @@ import { Directive, HostListener, HostBinding, ElementRef, Renderer } from '@ang
     '(click)': 'onClick($event.target)',
   },
 })
-export class BtnDirective {
+export class BtnDirective implements OnInit, OnDestroy {
   numberOfClicks = 0;
   // 设置属性
   @HostBinding('attr.role')
@@ -46,5 +46,13 @@ export class BtnDirective {
   onmouseenter(elem: HTMLElement) {
     console.log('mouseEnter: ', elem);
     console.log('mouseenter event: ', event);
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestory');
   }
 }

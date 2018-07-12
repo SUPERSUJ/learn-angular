@@ -1,0 +1,10 @@
+<p>
+  Inject延迟注入依赖class
+</p>
+<pre>
+  现在有一种新的，推荐的方法@Injectable()，使用新的providedIn属性直接在装饰器内注册提供者。它接受'root'作为您的应用程序的值或任何模块。使用时'root'，
+  您的注射剂将在应用程序中注册为单例，并且您无需将其添加到根模块的提供者。同样，如果您使用providedIn: UsersModule，则注入可注册为提供者而  UsersModule无需将其添加到模块的提供者。
+  引入这种新方法可以在应用程序中实现更好的树形抖动。目前，添加到模块提供者的服务将最终出现在最终的包中，即使它没有在应用程序中使用，这有点令人伤心。
+</pre>
+<h3>Favourite framework: {{name}}</h3>
+测试providedIn{{hero | json}}

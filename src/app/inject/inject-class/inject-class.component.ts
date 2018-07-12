@@ -1,7 +1,5 @@
 import { Component, Inject, forwardRef } from '@angular/core';
 
-import { HeroService } from '../hero.service';
-
 @Component({
   selector: 'app-inject-class',
   templateUrl: './inject-class.component.html',
@@ -9,11 +7,9 @@ import { HeroService } from '../hero.service';
 })
 export class InjectClassComponent {
   name: string;
-  hero: any;
 
-  constructor(@Inject (forwardRef(() => NameService)) nameService, private heroService: HeroService) {
+  constructor(@Inject (forwardRef(() => NameService)) nameService) {
     this.name = nameService.getName();
-    this.hero = heroService.getHeros();
   }
 
 }

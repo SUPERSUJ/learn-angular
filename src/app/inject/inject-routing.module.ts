@@ -5,6 +5,7 @@ import { InjectComponent } from './inject.component';
 import { InjectClassComponent } from './inject-class/inject-class.component';
 import { UseValueComponent } from './use-value/use-value.component';
 import { UseExistingComponent } from './use-existing/use-existing.component';
+import { UseFactoryComponent } from './use-factory/use-factory.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'use-existing',
         component: UseExistingComponent,
+      },
+      {
+        path: 'use-factory',
+        component: UseFactoryComponent,
       },
     ],
   }

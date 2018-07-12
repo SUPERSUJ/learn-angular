@@ -8,6 +8,8 @@ import { NameService } from './inject-class/inject-class.component';
 import { UseValueComponent } from './use-value/use-value.component';
 import { UseExistingComponent } from './use-existing/use-existing.component';
 import { HeroService } from './hero.service';
+import { UseFactoryService } from './use-factory.service';
+import { UseFactoryComponent } from './use-factory/use-factory.component';
 
 @NgModule({
   imports: [
@@ -18,11 +20,13 @@ import { HeroService } from './hero.service';
     InjectComponent,
     InjectClassComponent,
     UseValueComponent,
-    UseExistingComponent
+    UseExistingComponent,
+    UseFactoryComponent
   ],
   providers: [
     NameService,
-    HeroService
+    HeroService,
+    UseFactoryService
   ],
 })
 export class InjectModule { }

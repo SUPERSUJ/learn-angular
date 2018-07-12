@@ -4,6 +4,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Input,
+  OnChanges,
  } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./observables-input.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ObservablesInputComponent implements OnInit {
+export class ObservablesInputComponent implements OnInit, OnChanges {
   counter: number = 0;
 
   @Input()
@@ -24,14 +25,18 @@ export class ObservablesInputComponent implements OnInit {
   ngOnInit() {
     // timer专门取消订阅（subscription）
     let subscription = this.addStream.subscribe((n) => {
-      console.log('n: ', n);
+      // console.log('n: ', n);
       this.counter++;
-      console.log('this.counter: ', this.counter);
+      // console.log('this.counter: ', this.counter);
       // 没有调用下面这句，页面是不会更新的
       this.cdRef.markForCheck();
       if (this.counter === 5) {
         subscription.unsubscribe();
       }
     });
+  }
+
+  ngOnChanges(changes: any) {
+    console.log('changes: ', changes);
   }
 }

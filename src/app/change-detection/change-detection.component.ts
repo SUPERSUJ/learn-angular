@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, timer } from 'rxjs';
+import * as immutable from 'immutable';
 
 @Component({
   selector: 'app-change-detection',
@@ -8,11 +9,20 @@ import { Observable, timer } from 'rxjs';
 })
 export class ChangeDetectionComponent implements OnInit {
   counterStream: Observable<any>;
+  contactItem: any;
 
-  constructor() { }
+  constructor() {
+    this.contactItem = immutable.Map({
+      name: '张三',
+      telNum: 123456,
+    });
+  }
 
   ngOnInit() {
     this.counterStream = timer(0, 1000);
   }
 
+  doUpdate() {
+    this.contactItem = this.contactItem.set('telNum', 6543231);
+  }
 }

@@ -1,9 +1,11 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Injector } from '@angular/core';
 
 import { HeroService } from '../hero.service';
 import { UseFactoryService } from '../use-factory.service';
 
-const randomFactory = () => { return Math.random(); };
+const randomFactory = () => {
+  return Math.random();
+};
 
 @Component({
   selector: 'app-use-factory',
@@ -26,9 +28,15 @@ const randomFactory = () => { return Math.random(); };
 })
 export class UseFactoryComponent implements OnInit {
   name: string;
+  hero: any;
 
-  constructor(@Inject(UseFactoryService) private userFactoryService, @Inject('Random') private random) {
+  constructor(
+    @Inject(UseFactoryService) private userFactoryService,
+    @Inject('Random') private random,
+    private injector: Injector) {
     this.name = this.userFactoryService.getName();
+    let heroservice = this.injector.get(HeroService);
+    this.hero = heroservice.getHeros();
   }
 
   ngOnInit() {

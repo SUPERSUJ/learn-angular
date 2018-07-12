@@ -7,6 +7,8 @@ import { AttrDirectiveExam1Component } from './attr-directive-exam1/attr-directi
 import { HighLightDirective } from './attr-directive-exam1/high-light.directive';
 import { TagDirectiveComponent } from './tag-directive/tag-directive.component';
 import { IntervalDirDirective } from './tag-directive/interval-dir.directive';
+import { BtnDirective } from './all-point/btn.directive';
+import { AllPointComponent } from './all-point/all-point.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { IntervalDirDirective } from './tag-directive/interval-dir.directive';
     HighLightDirective,
     TagDirectiveComponent,
     IntervalDirDirective,
+    BtnDirective,
+    AllPointComponent,
   ]
 })
 export class DiffDirectiveModule { }

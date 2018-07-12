@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DiffDirectiveComponent } from './diff-directive.component';
 import { AttrDirectiveExam1Component } from './attr-directive-exam1/attr-directive-exam1.component';
 import { TagDirectiveComponent } from './tag-directive/tag-directive.component';
+import { AllPointComponent } from './all-point/all-point.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'tag-directive',
         component: TagDirectiveComponent
+      },
+      {
+        path: 'all-point',
+        component: AllPointComponent
       }
     ],
   }

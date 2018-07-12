@@ -80,6 +80,10 @@ const routes: Routes = [
     path: 'inject',
     loadChildren: 'src/app/inject/inject.module#InjectModule'
   },
+  {
+    path: 'route-reuse',
+    loadChildren: 'src/app/route-reuse/route-reuse.module#RouteReuseModule'
+  },
 ];
 
 @NgModule({

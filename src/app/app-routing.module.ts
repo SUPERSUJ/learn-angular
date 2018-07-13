@@ -84,6 +84,10 @@ const routes: Routes = [
     path: 'route-reuse',
     loadChildren: 'src/app/route-reuse/route-reuse.module#RouteReuseModule'
   },
+  {
+    path: 'many-route-tab',
+    loadChildren: 'src/app/many-route-tab/many-route-tab.module#ManyRouteTabModule'
+  },
 ];
 
 @NgModule({

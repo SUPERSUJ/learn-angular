@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
+import { SimpleReuseStrategy } from '../simple-reuse-strategy';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  providers: [SimpleReuseStrategy]
 })
 export class ChildComponent implements OnInit {
 
@@ -12,4 +15,7 @@ export class ChildComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteReuseRoute() {
+    SimpleReuseStrategy.deleteRouteSnapshot('parent');
+  }
 }

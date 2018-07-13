@@ -88,6 +88,10 @@ const routes: Routes = [
     path: 'many-route-tab',
     loadChildren: 'src/app/many-route-tab/many-route-tab.module#ManyRouteTabModule'
   },
+  {
+    path: 'component-factory-resolver',
+    loadChildren: 'src/app/component-factory-resolver/component-factory-resolver.module#ComponentFactoryResolverModule'
+  },
 ];
 
 @NgModule({

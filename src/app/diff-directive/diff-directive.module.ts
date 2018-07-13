@@ -9,6 +9,7 @@ import { TagDirectiveComponent } from './tag-directive/tag-directive.component';
 import { IntervalDirDirective } from './tag-directive/interval-dir.directive';
 import { BtnDirective } from './all-point/btn.directive';
 import { AllPointComponent } from './all-point/all-point.component';
+import { WithStarDirective } from './attr-directive-exam1/with-star.directive';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AllPointComponent } from './all-point/all-point.component';
     IntervalDirDirective,
     BtnDirective,
     AllPointComponent,
+    WithStarDirective,
   ]
 })
 export class DiffDirectiveModule { }

@@ -2,8 +2,12 @@
   属性Directive
 </p>
 <!-- hl才是可以变量 -->
-<p appHighLight appMouseEnterColor="blue" #hl="highLight">
+<p appHighLight appMouseEnterColor="blue" #hl="highLight" [lastName]="name">
   属性Directive
 </p>
 <p>exportAs</p>
 <p>指令的name属性值：{{hl.name}}</p>
+<p>指令的lastName属性值：{{hl.lastName}}</p>
+<button (click)="changeName()">改变lastName</button>
+<p *appWithStar="star" #star="withStar">*自定义指令</p>
+<p>name: {{star.name}}</p>

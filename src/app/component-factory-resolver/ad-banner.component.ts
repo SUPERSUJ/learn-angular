@@ -21,7 +21,7 @@ import { Ad2Component } from './ad2.component';
       <ng-template ad-host></ng-template>
     </div>
   `,
-  // ComponentFactoryResolver
+  // ComponentFactoryResolver必须映入动态组件
   entryComponents: [Ad1Component, Ad2Component],
 })
 export class AdBannerComponent implements OnInit, OnDestroy {

@@ -7,6 +7,9 @@ import { Directive, ElementRef, HostListener, Renderer2, Input } from '@angular/
 export class HighLightDirective {
   name: string = 'appHighLight';
 
+  @Input()
+  lastName: string;
+
   @Input('appMouseEnterColor')
   mouseEnterColor: string;
 

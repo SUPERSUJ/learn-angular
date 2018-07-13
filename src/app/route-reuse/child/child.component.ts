@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { SimpleReuseStrategy } from '../simple-reuse-strategy';
 

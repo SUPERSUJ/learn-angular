@@ -1,5 +1,5 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-
+// selector的属性名必须与Input set 的属性名相同
 @Directive({
   selector: '[appStructDirective]'
 })

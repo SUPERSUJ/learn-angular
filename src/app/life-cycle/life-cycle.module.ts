@@ -6,6 +6,7 @@ import { LifeCycleRoutingModule } from './life-cycle-routing.module';
 import { LifeCycleComponent } from './life-cycle.component';
 import { OnChangeParentComponent } from './on-change-parent/on-change-parent.component';
 import { OnChangesComponent } from './on-changes/on-changes.component';
+import { DoCheckComponent } from './do-check/do-check.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { OnChangesComponent } from './on-changes/on-changes.component';
   declarations: [
     LifeCycleComponent,
     OnChangeParentComponent,
-    OnChangesComponent
+    OnChangesComponent,
+    DoCheckComponent
   ]
 })
 export class LifeCycleModule { }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LifeCycleComponent } from './life-cycle.component';
 import { OnChangeParentComponent } from './on-change-parent/on-change-parent.component';
+import { DoCheckComponent } from './do-check/do-check.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'on-change-parent',
         component: OnChangeParentComponent,
+      },
+      {
+        path: 'do-check',
+        component: DoCheckComponent,
       }
     ],
   }

@@ -1,0 +1,7 @@
+:host{
+  font-family: Monaco, Consolas, monospace;
+}
+.container{
+  overflow-y: scroll;
+  height: 150px; 
+}

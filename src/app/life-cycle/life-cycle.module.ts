@@ -7,6 +7,8 @@ import { LifeCycleComponent } from './life-cycle.component';
 import { OnChangeParentComponent } from './on-change-parent/on-change-parent.component';
 import { OnChangesComponent } from './on-changes/on-changes.component';
 import { DoCheckComponent } from './do-check/do-check.component';
+import { DoCheckDifferParentComponent } from './do-check-differ-parent/do-check-differ-parent.component';
+import { DoCheckDifferChildComponent } from './do-check-differ-child/do-check-differ-child.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import { DoCheckComponent } from './do-check/do-check.component';
     LifeCycleComponent,
     OnChangeParentComponent,
     OnChangesComponent,
-    DoCheckComponent
+    DoCheckComponent,
+    DoCheckDifferParentComponent,
+    DoCheckDifferChildComponent
   ]
 })
 export class LifeCycleModule { }

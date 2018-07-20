@@ -5,3 +5,11 @@
 <div #container class="container" [scrollTop]="container.scrollHeight">
   <div #target></div>
 </div>
+<div>
+  arr:{{arr | json}}
+</div>
+<div>
+  <button (click)="addMyArrLen()">增加myArr长度</button>
+  <button (click)="removeMyArrLen()">删除myArr最后一个</button>
+  myArr:{{myArr | json}}
+</div>

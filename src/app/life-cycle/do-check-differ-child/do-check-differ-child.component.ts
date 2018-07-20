@@ -28,8 +28,11 @@ export class DoCheckDifferChildComponent implements DoCheck {
   @Input()
   arr;
 
+  myArr: Array<any> = [];
+
   messageDiffer: KeyValueDiffer<string, any>;
   arrDiffer: KeyValueDiffer<string, any>;
+  myArrDiffer: KeyValueDiffer<string, any>;
 
   constructor(
     public keyValueDiffers: KeyValueDiffers,
@@ -37,11 +40,13 @@ export class DoCheckDifferChildComponent implements DoCheck {
   ) {
     this.messageDiffer = this.keyValueDiffers.find({}).create();
     this.arrDiffer = this.keyValueDiffers.find([]).create();
+    this.myArrDiffer = this.keyValueDiffers.find([]).create();
   }
 
   ngDoCheck() {
     const changes = this.messageDiffer.diff(this.message);
-    const arr = this.messageDiffer.diff(this.arr);
+    const arr = this.arrDiffer.diff(this.arr);
+    const myArr = this.myArrDiffer.diff(this.myArr);
 
     if (changes) {
       changes.forEachChangedItem(message => {
@@ -54,5 +59,22 @@ export class DoCheckDifferChildComponent implements DoCheck {
         console.log('forEachAddedItem item: ', item);
       });
     }
+    if (myArr) {
+      myArr.forEachPreviousItem(item => {
+        console.log('forEachPreviousItem myArr: ', item);
+      });
+      // 被删除的元素进行遍历
+      myArr.forEachRemovedItem(item => {
+        console.log('forEachRemovedItem: ', item);
+      })
+    }
+  }
+
+  addMyArrLen() {
+    this.myArr.push(this.myArr.length + 2);
+  }
+
+  removeMyArrLen() {
+    this.myArr.pop();
   }
 }

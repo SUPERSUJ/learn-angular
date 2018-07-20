@@ -4,5 +4,6 @@
 <div>
   <input type="text" [(ngModel)]="note.greeting">
   <button (click)="addKey()">增加数组长度</button>
+  <button (click)="removeKey()">删除数组最后一个</button>
 </div>
 <app-do-check-differ-child [message]="note" [arr]="arr"></app-do-check-differ-child>

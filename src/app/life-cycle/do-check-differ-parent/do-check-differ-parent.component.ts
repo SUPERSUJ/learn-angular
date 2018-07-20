@@ -19,4 +19,8 @@ export class DoCheckDifferParentComponent implements OnInit {
   addKey() {
     this.arr.push(this.arr.length + 1);
   }
+
+  removeKey() {
+    this.arr.pop();
+  }
 }

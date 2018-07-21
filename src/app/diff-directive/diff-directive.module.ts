@@ -11,6 +11,8 @@ import { BtnDirective } from './all-point/btn.directive';
 import { AllPointComponent } from './all-point/all-point.component';
 import { StructDirectiveComponent } from './struct-directive/struct-directive.component';
 import { StructDirectiveDirective } from './struct-directive/struct-directive.directive';
+import { DirectiveLifeCycleComponent } from './directive-life-cycle/directive-life-cycle.component';
+import { DirectiveLifeCycleDirective } from './directive-life-cycle/directive-life-cycle.directive';
 
 @NgModule({
   imports: [
@@ -27,6 +29,8 @@ import { StructDirectiveDirective } from './struct-directive/struct-directive.di
     AllPointComponent,
     StructDirectiveDirective,
     StructDirectiveComponent,
+    DirectiveLifeCycleComponent,
+    DirectiveLifeCycleDirective,
   ]
 })
 export class DiffDirectiveModule { }

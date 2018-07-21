@@ -1,0 +1,6 @@
+<p>
+  指令(Directive)生命周期
+</p>
+<button (click)="addArr()">增加长度</button>
+<button (click)="removeArr()">缩短长度</button>
+<div *ngFor="let item of arr" appDirectiveLifeCycle>{{item}}</div>

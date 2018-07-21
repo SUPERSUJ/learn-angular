@@ -6,6 +6,7 @@ import { AttrDirectiveExam1Component } from './attr-directive-exam1/attr-directi
 import { TagDirectiveComponent } from './tag-directive/tag-directive.component';
 import { AllPointComponent } from './all-point/all-point.component';
 import { StructDirectiveComponent } from './struct-directive/struct-directive.component';
+import { DirectiveLifeCycleComponent } from './directive-life-cycle/directive-life-cycle.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'struct-directive',
         component: StructDirectiveComponent
+      },
+      {
+        path: 'directive-life-cycle',
+        component: DirectiveLifeCycleComponent
       }
     ],
   }

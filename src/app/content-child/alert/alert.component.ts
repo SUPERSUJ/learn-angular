@@ -9,7 +9,7 @@ export class AlertComponent implements AfterContentInit, AfterViewInit {
   @ViewChild('h3')
   h3;
 
-  @ContentChild('insideNgContent')
+  @ContentChild('insideNgContent') // 拿到元素
   insideNgContent;
 
   // 先执行AfterContentInit, 再执行AfterViewInit

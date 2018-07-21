@@ -96,6 +96,10 @@ const routes: Routes = [
     path: 'component-style',
     loadChildren: 'src/app/component-style/component-style.module#ComponentStyleModule'
   },
+  {
+    path: 'custom-element',
+    loadChildren: 'src/app/custom-element/custom-element.module#CustomElementModule'
+  },
 ];
 
 @NgModule({

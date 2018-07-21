@@ -1,0 +1,24 @@
+:host {
+  /* 没有display:block,border的样式会很奇怪 */
+  display: block;
+  border: 2px solid blue;
+}
+
+/* 子组件会继承下面样式，其他样式（不包括::ng-deep）都不会继承 */
+:host(.component-style-active) {
+  color: red;
+}
+
+p {
+  font-size: 30px;
+}
+
+/* :host p 样式权重高于p */
+:host p {
+  font-size: 20px;
+}
+/* ::ng-deep 也会影响当前组件的p元素样式，即使:host(.component-style-active)，也没用 */
+:host ::ng-deep p {
+  color: orange;
+  font-size: 30px;
+}

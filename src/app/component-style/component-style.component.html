@@ -1,0 +1,12 @@
+<p>
+  组件样式
+</p>
+给host添加component-style-active样式<button (click)="toggleActive()">toggle active</button>
+<div [ngClass]="{ 'child-active': active }">
+  <app-component-style-child></app-component-style-child>
+</div>
+<div>
+  <app-component-style-child>
+    <app-component-style-child2></app-component-style-child2>
+  </app-component-style-child>
+</div>

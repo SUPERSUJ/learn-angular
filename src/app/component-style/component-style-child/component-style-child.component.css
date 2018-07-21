@@ -1,0 +1,7 @@
+:host-context(.child-active) {
+  color: blue;
+}
+/* 父组件::ng-deep的样式高于这里的样式 */
+:host-context(.child-active) {
+  font-size: 40px;
+}

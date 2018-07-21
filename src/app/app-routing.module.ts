@@ -92,6 +92,10 @@ const routes: Routes = [
     path: 'component-factory-resolver',
     loadChildren: 'src/app/component-factory-resolver/component-factory-resolver.module#ComponentFactoryResolverModule'
   },
+  {
+    path: 'component-style',
+    loadChildren: 'src/app/component-style/component-style.module#ComponentStyleModule'
+  },
 ];
 
 @NgModule({

@@ -28,3 +28,13 @@
   <br>
   {{message$ | async}}
 </div>
+<div>
+  带缓存的管道
+  <br>
+  <!-- <div>所有数据：
+    {{1 | pipesWithCache | json}}
+  </div> -->
+  <div *ngFor="let github of (1 | pipesWithCache) ">
+    {{github.login}} - {{github.id}}
+  </div>
+</div>

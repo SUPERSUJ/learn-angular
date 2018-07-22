@@ -1,0 +1,30 @@
+<p>
+  管道
+</p>
+<div>
+  {{birthday | date}}
+</div>
+<div>
+  {{birthday | date:"yyyy-MM-dd"}}
+</div>
+<div>
+  <button (click)="toggleFormat()">toggle format</button>
+  {{birthday | date:format}}
+</div>
+<div>
+  {{birthday | date | uppercase}}
+</div>
+<div>
+  pow自定义管道(一个参数)
+  <br>
+  {{2 | pow:10}}
+  <br>
+  多个参数
+  <br>
+  {{2 | pow:10:10}}
+</div>
+<div>
+  AsyncPipe
+  <br>
+  {{message$ | async}}
+</div>

@@ -100,6 +100,10 @@ const routes: Routes = [
     path: 'custom-element',
     loadChildren: 'src/app/custom-element/custom-element.module#CustomElementModule'
   },
+  {
+    path: 'pipes',
+    loadChildren: 'src/app/pipes/pipes.module#PipesModule'
+  },
 ];
 
 @NgModule({

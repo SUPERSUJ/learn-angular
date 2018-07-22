@@ -15,7 +15,7 @@ const fadeIn = trigger('fadeIn', [
   transition('active => inactive', animate('1000ms ease-out')),
   transition('void => *', [ // 显示时的时候的动画
     animate(500, keyframes([
-      style({ height: '0', opacity: 0, offset: 0 }),
+      style({ height: '0', opacity: 0, offset: 0 }), // 关键帧
       style({ height: '*', opacity: 1, offset: 1 })
     ]))
   ]),

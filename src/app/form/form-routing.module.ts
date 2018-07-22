@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FormComponent } from './form.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'user-input',
         component: UserInputComponent,
+      },
+      {
+        path: 'template-driven-forms',
+        component: TemplateDrivenFormsComponent,
       }
     ],
   }

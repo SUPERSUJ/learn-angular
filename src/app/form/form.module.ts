@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { FormRoutingModule } from './form-routing.module';
 import { FormComponent } from './form.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { UserInputComponent } from './user-input/user-input.component';
     FormsModule,
     FormRoutingModule
   ],
-  declarations: [FormComponent, UserInputComponent]
+  declarations: [FormComponent, UserInputComponent, TemplateDrivenFormsComponent]
 })
 export class FormModule { }

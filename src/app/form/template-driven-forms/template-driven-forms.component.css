@@ -1,0 +1,17 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+/* 值变了，生效 */
+.ng-dirty[name=name] {
+  color: red;
+}
+/* 当input获取过焦点时，才会生效 */
+.ng-touched[name=name] {
+  color: orange;
+}

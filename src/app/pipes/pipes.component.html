@@ -31,9 +31,10 @@
 <div>
   带缓存的管道
   <br>
-  <!-- <div>所有数据：
+  <!-- 两次请求 -->
+  <div>所有数据：
     {{1 | pipesWithCache | json}}
-  </div> -->
+  </div>
   <div *ngFor="let github of (1 | pipesWithCache) ">
     {{github.login}} - {{github.id}}
   </div>

@@ -12,6 +12,7 @@ import { UseExistingComponent } from './use-existing/use-existing.component';
 import { UseFactoryService } from './use-factory.service';
 import { UseFactoryComponent } from './use-factory/use-factory.component';
 import { UseFactoryChildComponent } from './use-factory-child/use-factory-child.component';
+import { MultiComponent } from './multi/multi.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { UseFactoryChildComponent } from './use-factory-child/use-factory-child.
     UseValueComponent,
     UseExistingComponent,
     UseFactoryComponent,
-    UseFactoryChildComponent
+    UseFactoryChildComponent,
+    MultiComponent
   ],
   providers: [
     NameService,

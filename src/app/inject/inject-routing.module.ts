@@ -6,6 +6,7 @@ import { InjectClassComponent } from './inject-class/inject-class.component';
 import { UseValueComponent } from './use-value/use-value.component';
 import { UseExistingComponent } from './use-existing/use-existing.component';
 import { UseFactoryComponent } from './use-factory/use-factory.component';
+import { MultiComponent } from './multi/multi.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'use-factory',
         component: UseFactoryComponent,
+      },
+      {
+        path: 'multi',
+        component: MultiComponent,
       },
     ],
   }

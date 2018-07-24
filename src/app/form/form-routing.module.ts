@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from './form.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,11 @@ const routes: Routes = [
       {
         path: 'template-driven-forms',
         component: TemplateDrivenFormsComponent,
-      }
+      },
+      {
+        path: 'reactive-form',
+        component: ReactiveFormComponent,
+      },
     ],
   }
 ];

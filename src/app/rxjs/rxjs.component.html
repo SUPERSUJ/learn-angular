@@ -4,3 +4,21 @@
 <div>
   of: {{ofItems | async}}
 </div>
+<ul>
+  <li *ngFor="let item of ofItems | async">{{item}}</li>
+</ul>
+<p>share</p>
+<button (click)="counter$.next(1)">Up Vote</button>
+<p>withLatestForm</p>
+<div>
+  <!-- 使用formGroup, 必须用ReactiveFormsModule  -->
+  <form [formGroup]="loginForm" (submit)="submit$.next()">
+    <label>Login:</label>
+    <input type="text" formControlName="login">
+
+    <label>Password:</label>
+    <input type="text" formControlName="password">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

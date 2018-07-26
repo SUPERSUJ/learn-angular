@@ -104,6 +104,10 @@ const routes: Routes = [
     path: 'pipes',
     loadChildren: 'src/app/pipes/pipes.module#PipesModule'
   },
+  {
+    path: 'rxjs',
+    loadChildren: 'src/app/rxjs/rxjs.module#RxjsModule'
+  },
 ];
 
 @NgModule({

@@ -5,6 +5,24 @@ import { RepoService } from './repo.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { EventEmitter } from 'events';
 
+// import './diff-methods/multicast';
+// import './diff-methods/tap';
+// import './diff-methods/mapTo';
+// import './diff-methods/timer';
+// import './diff-methods/forkJoin';
+// import './diff-methods/combineLatest';
+// import './diff-methods/zip';
+// import './diff-methods/every';
+// import './diff-methods/create';
+// import './diff-methods/empty';
+// import './diff-methods/fromPromise';
+// import './diff-methods/mergeMap';
+// import './diff-methods/scan';
+// import './diff-methods/reduce';
+// import './diff-methods/takeUntil';
+// import './diff-methods/takeWhile';
+import './diff-methods/throttle';
+
 @Component({
   selector: 'app-rxjs',
   templateUrl: './rxjs.component.html',
@@ -68,7 +86,7 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.interval$ = interval(1000) // 从0开始，每次累加1
       .subscribe((val) => {
-        console.log('interval val: ', val);
+        // console.log('interval val: ', val);
         if (val === 5) {
           this.interval$.unsubscribe();
         }

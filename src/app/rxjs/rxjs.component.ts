@@ -21,7 +21,30 @@ import { EventEmitter } from 'events';
 // import './diff-methods/reduce';
 // import './diff-methods/takeUntil';
 // import './diff-methods/takeWhile';
-import './diff-methods/throttle';
+// import './diff-methods/throttle';
+// import './diff-methods/merge';
+// import './diff-methods/mergeAll';
+// import './diff-methods/range';
+// import './diff-methods/observable';
+// import './diff-methods/publish';
+// import './diff-methods/debounce';
+// import './diff-methods/distinctUtilChanged';
+// import './diff-methods/first';
+// import './diff-methods/ignoreElement';
+// import './diff-methods/sample';
+// import './diff-methods/skip';
+// import './diff-methods/skipUntil';
+// import './diff-methods/retry';
+// import './diff-methods/retryWhen';
+// import './diff-methods/concat';
+// import './diff-methods/pairwise';
+// import testBuffer from './diff-methods/buffer';
+// import './diff-methods/bufferCount';
+// import './diff-methods/expand';
+// import './diff-methods/groupBy';
+// import './diff-methods/partition';
+// import './diff-methods/pluck';
+// import './diff-methods/switchMap';
 
 @Component({
   selector: 'app-rxjs',
@@ -119,6 +142,8 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe((x) => {
         console.log('clientX: ', x);
       });
+
+    // testBuffer();
   }
 
   ngOnDestroy() {

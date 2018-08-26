@@ -108,6 +108,10 @@ const routes: Routes = [
     path: 'rxjs',
     loadChildren: 'src/app/rxjs/rxjs.module#RxjsModule'
   },
+  {
+    path: 'routers',
+    loadChildren: 'src/app/routers/routers.module#RoutersModule'
+  },
 ];
 
 @NgModule({

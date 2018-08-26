@@ -1,0 +1,22 @@
+<p>
+  路由
+</p>
+<ul>
+  <li [routerLink]="['/routers/outlets']">附属outlet</li>
+</ul>
+<p>
+  path参数 : 
+  <input type="text" [(ngModel)]="id">
+  <button [routerLink]="['/routers/path', id]">routerLink跳转</button>
+  <button (click)="toPathByNavigate()">navigate跳转</button>
+  <button (click)="toPathByNavigateByUrl()">navigateByUrl跳转</button>
+</p>
+<p>
+  query参数 : 
+  <input type="text" [(ngModel)]="params">
+  <button [routerLink]="['/routers/query']" [queryParams]="{params: params}">routerLink跳转</button>
+  <button (click)="toQueryByNavigate()">navigate跳转</button>
+  <button (click)="toQueryByNavigateByUrl()">navigateByUrl跳转</button>
+</p>
+
+<router-outlet></router-outlet>

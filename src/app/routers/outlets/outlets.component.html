@@ -1,0 +1,10 @@
+<p>
+  附属outlet
+</p>
+<ul>
+  <li [routerLink]="['/routers/outlets', { outlets: { aux: 'foo' } }]">带foo</li>
+  <li [routerLink]="['/routers/outlets', { outlets: { aux: 'bar' } }]">带bar</li>
+</ul>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
+
